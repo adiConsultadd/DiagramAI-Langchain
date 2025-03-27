@@ -1,0 +1,36 @@
+direction right
+colorMode pastel styleMode shadow typeface clean
+
+"System Infrastructure & Deployment" {
+  "AWS Cloud Hosting" [icon: aws]
+  "CI/CD Pipeline & Agile Process" [icon: refresh-cw]
+}
+
+"Data Pipeline" {
+  "Data Ingestion & Cleansing Engine" [icon: api]
+  "Integrated Analytics & Reporting Module" [icon: globe]
+}
+
+"Security and Integration" {
+  "Security & Compliance Framework" [icon: lock]
+  "API Integration for Legacy Systems" [icon: api]
+}
+
+"Analytics & Visualization" {
+  "Python Analytics Modules" [icon: python]
+  "ArcGIS Geospatial Visualization" [icon: globe]
+}
+
+"User Engagement" {
+  "Stakeholder Training & Support" [icon: user]
+}
+
+// Define connections between components
+"AWS Cloud Hosting" > "Data Ingestion & Cleansing Engine": "Provides raw data and compute resources for ingestion"
+"Data Ingestion & Cleansing Engine" > "Integrated Analytics & Reporting Module": "Passes cleansed data for analytics and reporting"
+"Python Analytics Modules" > "Integrated Analytics & Reporting Module": "Delivers advanced analytics inputs"
+"Integrated Analytics & Reporting Module" > "ArcGIS Geospatial Visualization": "Feeds analytic outcomes to geospatial visualization"
+"API Integration for Legacy Systems" > "Data Ingestion & Cleansing Engine": "Ingests legacy data via standardized APIs"
+"Security & Compliance Framework" > "API Integration for Legacy Systems": "Secures API integration and data exchange"
+"CI/CD Pipeline & Agile Process" > "AWS Cloud Hosting": "Automated deployments to cloud infrastructure"
+"Stakeholder Training & Support" <> "Integrated Analytics & Reporting Module": "Facilitates user training and feedback on reporting tools"
